@@ -54,7 +54,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://demo.fusio-project.org/index.php",
+              "raw": "https://demo.fusio-project.org/index.php/",
               "protocol": "https",
               "host": [
                 "demo",
@@ -62,7 +62,8 @@
                 "org"
               ],
               "path": [
-                "index.php"
+                "index.php",
+                ""
               ],
               "query": [
                 {
