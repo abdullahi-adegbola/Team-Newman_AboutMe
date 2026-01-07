@@ -1,0 +1,167 @@
+newman
+
+APICollection
+
+□ Get All Todo Entries
+└ Get All Todo Entries
+  1. Status code is 200 (OK)
+  2. Status code is 200 (OK)
+  GET https://demo.fusio-project.org/index.php [200 OK, 2.53kB, 1000ms]
+  √  Status code should be 200)
+  √  Status code string should be 'OK'
+
+□ Get All Entries
+└ Get All Entries
+  3. Status code is 200 (OK)
+  GET https://demo.fusio-project.org/index.php/ [200 OK, 2.53kB, 180ms]
+
+□ Get entry per ID
+└ Get entry per ID - Valid ID
+  4. Status code is 200 (OK)
+  GET https://demo.fusio-project.org/index.php [200 OK, 2.53kB, 182ms]
+
+└ Get entry per ID - Invalid ID(params not using TODO ID)
+  5. Status code is 200 (OK)
+  GET https://demo.fusio-project.org/ [200 OK, 2.53kB, 180ms]
+
+□ Get Books
+└ Get All Books
+  6. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/books [200 OK, 1.16kB, 1973ms]
+
+└ Get Books by ID
+  7. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/books/1 [200 OK, 1.06kB, 1061ms]
+
+└ Get Books by Type
+  8. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/books?type=fiction [200 OK, 1.02kB, 728ms]
+
+□ Place a book order
+└ Place a book order - using book ID
+  9. Status code is 200 (OK)
+  POST https://simple-books-api.glitch.me/orders [401 Unauthorized, 791B, 1098ms]
+
+□ Get an order
+└ Get all orders
+ 10. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/orders [401 Unauthorized, 791B, 1143ms]
+
+└ Get an order - using orderID
+ 11. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/orders/AaX7WGCUeHH3lRwGRh57M [401 Unauthorized, 791B, 1108ms]
+
+□ Update an order
+└ Update an order
+ 12. Status code is 200 (OK)
+  POST https://simple-books-api.glitch.me/orders/ [401 Unauthorized, 791B, 1044ms]
+
+□ Delete an order
+└ Delete an order
+ 13. Status code is 200 (OK)
+  DELETE https://simple-books-api.glitch.me/orders/rObASEWYlVrRX6cTAEgbt [401 Unauthorized, 791B, 1099ms]
+
+→ Register API Client
+ 14. Status code is 200 (OK)
+  POST https://simple-books-api.glitch.me/api-clients/ [409 Conflict, 811B, 1070ms]
+
+→ Get API Status
+ 15. Status code is 200 (OK)
+  GET https://simple-books-api.glitch.me/status [200 OK, 754B, 1043ms]
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                  14 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                  26 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                  15 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                  17 │                  15 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 14.1s                                           │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 10.01kB (approx)                               │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 922ms [min: 180ms, max: 1973ms, s.d.: 463ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+[31m   # [39m[31m failure   [39m[31m detail                                                                              [39m
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 01.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get All Todo Entries / Get All Todo Entries"                                
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 02.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get All Todo Entries / Get All Todo Entries"                                
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 03.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get All Entries / Get All Entries"                                          
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 04.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get entry per ID / Get entry per ID - Valid ID"                             
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 05.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get entry per ID / Get entry per ID - Invalid ID(params not using TODO ID)" 
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 06.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get Books / Get All Books"                                                  
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 07.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get Books / Get Books by ID"                                                
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 08.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get Books / Get Books by Type"                                              
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 09.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Place a book order / Place a book order - using book ID"                    
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 10.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get an order / Get all orders"                                              
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 11.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get an order / Get an order - using orderID"                                
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 12.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Update an order / Update an order"                                          
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 13.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Delete an order / Delete an order"                                          
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 14.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Register API Client"                                                        
+[90m     [39m[90m           [39m[90m                                                                                     [39m
+ 15.  TypeError  Status code is 200 (OK)                                                             
+                 Cannot read properties of undefined (reading 'to')                                  
+                 at assertion:0 in test-script                                                       
+                 inside "Get API Status"                                                             
